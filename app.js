@@ -1,13 +1,19 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
+const tasks = require("./routes/tasks.routes");
 
+// middleware
+app.use(express.json());
 
-// routes 
-app.get('/hello', (req, res) => {
-    res.send('Task Manager App')
+// routes
+app.get("/hello", (req, res) => {
+  res.send("Task Manager App");
+});
 
-})
-const port = 3000
+app.use("/api/v1/tasks", tasks);
 
+// app.get('api/v1/tasks')
 
-app.listen(port, console.log(`App listening on port ${port}...`))
+const port = 3000;
+
+app.listen(port, console.log(`App listening on port ${port}...`));

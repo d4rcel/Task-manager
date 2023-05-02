@@ -1,0 +1,1 @@
+const connectionString = "mongodb+srv://dara:<password>@freecodecampnodeexpress.vanx47s.mongodb.net/?retryWrites=true&w=majority"
