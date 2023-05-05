@@ -1,1 +1,9 @@
-const connectionString = "mongodb+srv://dara:<password>@freecodecampnodeexpress.vanx47s.mongodb.net/?retryWrites=true&w=majority"
+const mongoose = require("mongoose");
+
+
+const connectDB = (url) => {
+  return mongoose.connect(url);
+};
+
+
+module.exports = connectDB
